@@ -1,0 +1,52 @@
+.container {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 620px;
+}
+
+.form {
+    text-align: auto;
+    font-size: 20px;
+    background-color: #fdfdf7;
+    box-shadow: 3px 4px 20px 5px #878573;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form__header {
+    text-align: center;
+    margin: 50px;
+}
+
+.form__button {
+    background-color: teal;
+    max-width: 479px;
+    width: 60%;
+    padding: 10px;
+    margin: 30px;
+    margin-left: 100px;
+    border: none;
+    color: white;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 23%)
+}
+
+.form__button:active {
+    background-color: rgb(23, 227, 223);
+}
+
+.form__labelText {
+    padding: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form__field {
+    text-align: center;
+}
+
+.form__information {
+    padding: 30px;
+}

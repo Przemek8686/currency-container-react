@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Form from "./Form";
+import currencies from "./Currencies"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+    const [result, setResult] = useState();
+
+    const calculateResult = (currency, amount) => {
+        const rate = currencies.find(({ name }) => name === currency).rate;
+
+        setResult({
+            targetAmount: amount / rate,
+            currency,
+        });
+    }
+
+    return ( <
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+        <
+        Form result = { result }
+        calculateResult = { calculateResult }
+        /> < / >
+    );
+
+
+};
+
 
 export default App;
