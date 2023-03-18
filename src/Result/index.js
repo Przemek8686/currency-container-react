@@ -1,14 +1,11 @@
 import "./style.css";
-const Result = ({ result }) => ( <
-    p className = "result" > {!!result && ( <
-            strong > { result.targetAmount.toFixed(2) } { result.currency } <
-            /strong>
-
-        )
+const Result = ({ result }) => (
+    <p className="result"> {!!result && (
+        < strong > {result.targetAmount.toFixed(2)} {result.currency}</strong>
+       
+    )
     }
-
-    <
-    /p>
+    </p>
 );
 
 export default Result;

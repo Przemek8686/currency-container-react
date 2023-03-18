@@ -2,6 +2,8 @@ import { useState } from "react";
 import Form from "./Form";
 import currencies from "./Currencies";
 import Header from "./Header";
+import Fotter from "./Fotter";
+
 function App() {
   const [result, setResult] = useState();
 
@@ -18,6 +20,7 @@ function App() {
     <>
       <Header title="currency conventer" />
       <Form result={result} calculateResult={calculateResult} />
+      <Fotter title="Wg.średniego kursu NBP z dn. 09.03.2023r."/>
 
     </>
   );
