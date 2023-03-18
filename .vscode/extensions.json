@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "standard.vscode-standard"
+        "esbenp.prettier-vscode",
+        "numso.prettier-standard-vscode",
+        "passionkind.prettier-vscode-with-tabs"
     ]
 }

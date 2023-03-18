@@ -1,4 +1,4 @@
 {
-    "editor.formatOnSave": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.codeLens": true
 }
