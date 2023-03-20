@@ -9,7 +9,6 @@ function App() {
 
   const calculateResult = (currency, amount) => {
     const rate = currencies.find(({ name }) => name === currency).rate;
-
     setResult({
       targetAmount: amount / rate,
       currency,
@@ -20,7 +19,7 @@ function App() {
     <>
       <Header title="currency conventer" />
       <Form result={result} calculateResult={calculateResult} />
-      <Fotter title="Wg.średniego kursu NBP z dn. 09.03.2023r."/>
+      <Fotter title="Wg.średniego kursu NBP z dn. 09.03.2023r." />
 
     </>
   );
