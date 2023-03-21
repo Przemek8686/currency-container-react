@@ -1,7 +1,7 @@
 # Description
 A simple web application that includes a currency converter. in the Application, we can convert PLN to Euro, Dollars or British Pounds.
 # Demo
-![Currency-container] ()
+![Currency-container] (https://github.com/Przemek8686/currency-container-react/blob/814829ff39e3d1b55a77e9b998d7020ebf71e104/public/demo.png)
 
 # Getting Started with Create React App
 
