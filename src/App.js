@@ -3,6 +3,7 @@ import Form from "./Form";
 import currencies from "./Currencies";
 import Header from "./Header";
 import Fotter from "./Fotter";
+import { Clock } from "./Form/Clock";
 
 function App() {
   const [result, setResult] = useState();
@@ -18,9 +19,9 @@ function App() {
   return (
     <>
       <Header title="currency conventer" />
+      <Clock />
       <Form result={result} calculateResult={calculateResult} />
       <Fotter title="Wg.średniego kursu NBP z dn. 09.03.2023r." />
-
     </>
   );
 }
