@@ -1,6 +1,7 @@
 # Description
 
 A simple web application that includes a currency converter. in the Application, we can convert PLN to Euro, Dollars or British Pounds.
+In the application, we can also check the date and time on an ongoing basis.
 
 # Demo
 
