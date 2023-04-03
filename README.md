@@ -4,7 +4,7 @@ A simple web application that includes a currency converter. in the Application,
 
 # Demo
 
-![Currency-container](https://github.com/Przemek8686/currency-container-react/blob/de47d5f9d2417bef0e5fd530677279272c6003a8/public/demo.png)
+![Currency-container](https://github.com/Przemek8686/currency-container-react/blob/6d91796116c0c971d5b6114082729f5e3f5b3e1a/public/demo2.png)
 
 [Link Demo](https://przemek8686.github.io/currency-container-react/)
 
