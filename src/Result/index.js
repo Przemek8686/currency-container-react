@@ -1,12 +1,13 @@
-import "./style.css";
-const Result = ({ result }) => (
-  <p className="result">
+import { StyledResult } from "./styled";
+
+export const Result = ({ result }) => (
+  <StyledResult>
     {!!result && (
       <strong>
         {result.targetAmount.toFixed(2)} {result.currency}
       </strong>
     )}
-  </p>
+  </StyledResult>
 );
 
 export default Result;
