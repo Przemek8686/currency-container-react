@@ -1,8 +1,4 @@
-import "./style.css";
-const Header = ({ title }) => (
-    <header>
-        <h1 className="header">{title.toUpperCase()}</h1>
-    </header>
-);
+import { StyledHeader } from "./styled";
+const Header = ({ title }) => <StyledHeader>{title}</StyledHeader>;
 
 export default Header;
