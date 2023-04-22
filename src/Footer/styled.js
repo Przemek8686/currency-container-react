@@ -4,5 +4,5 @@ export const StyledFooter = styled.footer`
   padding-bottom: 20px;
   font-size: 15px;
   font-weight: 700;
-  color: #000;
+  color: white;
 `;

@@ -20,9 +20,9 @@ function App() {
   return (
     <>
       <Header title="currency conventer" />
-      <Clock />
+      <Clock/>
       <Form result={result} calculateResult={calculateResult} />
-      <Footer title="Wg.średniego kursu NBP z dn. 09.03.2023r." />
+      <Footer/>
     </>
   );
 }
