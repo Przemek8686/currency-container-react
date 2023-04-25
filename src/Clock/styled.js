@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const Div = styled.div`
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
