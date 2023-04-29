@@ -66,3 +66,14 @@ export const Select = styled.select`
 export const LabelTextResult = styled.p`
   margin-top: 20px;
 `;
+
+export const Loading = styled.p`
+  color: black;
+`;
+
+export const Miss = styled.p`
+  color: red;
+`;
+export const Info = styled.p`
+  color: black;
+`;
