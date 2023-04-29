@@ -1,6 +1,6 @@
 import { useState } from "react";
-import currencies from "../currencies";
-import Result from "../Result";
+import { useRatesData } from "./useRatesData";
+import { Result } from "../Result";
 import {
   StyledForm,
   Fieldset,
@@ -10,20 +10,44 @@ import {
   Select,
   Button,
   LabelTextResult,
+  Loading,
+  Miss,
+  Info
 } from "./styled";
 
-const Form = ({ result, calculateResult }) => {
-  const [currency, setCurrency] = useState(currencies[0].name);
+export const Form = () => {
+  const [result, setResult] = useState();
+  const ratesData = useRatesData();
+  const [currency, setCurrency] = useState("EUR");
   const [amount, setAmount] = useState("");
+
+  const calculateResult = (currency, amount) => {
+    const rate = ratesData.rates[currency];
+    setResult({
+      sourceAmount: +amount,
+      targetAmount: amount * rate,
+      currency,
+    });
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
-  };
+  }
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-      <Fieldset>
+      {ratesData.state === "loading" ? (
+        <Loading>
+          Prosze czekac, ładujemy kursy walut.
+        </Loading>
+      ) : ratesData.state === "error" ? (
+        <Miss>
+          Bład, sprawdz połaczenie z internetem, lub sprobuj ponownie.
+        </Miss>
+      ) : (
+        <>
+    <Fieldset>
         <Label>
           <LabelText> Amount in PLN* </LabelText>
           <Input
@@ -42,14 +66,14 @@ const Form = ({ result, calculateResult }) => {
           <Select
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
-            className="form__field"
-            name="currency"
-          >
-            {currencies.map((currency) => (
-              <option key={currency.name} value={currency.name}>
-                {currency.name}
+           >
+            {Object.keys(ratesData.rates).map((currency) =>{
+              return (
+              <option key={currency} value={currency}>
+                {currency}
               </option>
-            ))}
+            );
+})}
           </Select>
         </Label>
         <Label>
@@ -57,8 +81,16 @@ const Form = ({ result, calculateResult }) => {
         </Label>
         <LabelTextResult>Result:</LabelTextResult>
         <Result result={result} />
+        <Info>
+                    Kursy walut pobierane są z Europejskiego Banku Centralnego.<br />
+                    Aktualne na dzień:<br />
+                    {ratesData.date}
+                </Info>
       </Fieldset>
-    </StyledForm>
+      </>
+      )}
+      
+     </StyledForm>
   );
 };
 

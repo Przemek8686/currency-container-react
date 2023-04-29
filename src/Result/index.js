@@ -1,6 +1,6 @@
 import { StyledResult } from "./styled";
 
-export const Result = ({ result }) => (
+const Result = ({ result }) => (
   <StyledResult>
     {!!result && (
       <strong>
@@ -10,4 +10,4 @@ export const Result = ({ result }) => (
   </StyledResult>
 );
 
-export default Result;
+export {Result};
