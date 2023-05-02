@@ -5,7 +5,7 @@ In the application, we can also check the date and time on an ongoing basis.
 
 # Demo
 
-![Currency-container](https://github.com/Przemek8686/currency-container-react/blob/60a5469d6326cd5d4362bf0f8e61179d92d4acf9/public/demo.png)
+![Currency-container](https://github.com/Przemek8686/currency-container-react/blob/06ccfe56ff99ef215df9c31939bad3ba00bab35a/public/demo.png)
 
 [Link Demo](https://przemek8686.github.io/currency-container-react/)
 
