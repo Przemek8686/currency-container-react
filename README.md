@@ -11,7 +11,7 @@ In the application, we can also check the date and time on an ongoing basis.
 
 # Technologies
 
-HTML,CSS,JS,React.js, Styled - Components.
+HTML,CSS,JS,React.js, Styled - Components,async function, error handling. 
 
 # Getting Started with Create React App
 
