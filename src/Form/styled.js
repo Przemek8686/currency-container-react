@@ -5,6 +5,8 @@ export const StyledForm = styled.form`
   background-color: whitesmoke;
   border-radius: 15px;
   border: 1px solid black;
+  min-height: 550px;
+  min-width: 550px;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -25,7 +27,7 @@ export const Label = styled.label`
 `;
 
 export const LabelText = styled.span`
-  font-size: 30px;
+  font-size: 20px;
   margin: 5px;
 `;
 
@@ -56,8 +58,10 @@ export const Button = styled.button`
   }
 `;
 export const Select = styled.select`
-  padding: 5px;
+  padding: 5px 90px;
+  margin-top: 10px;
   border-radius: 20px;
+  border: 2px solid rgb(56, 53, 53);
   &:hover {
     background-color: gray;
   }
@@ -65,6 +69,7 @@ export const Select = styled.select`
 
 export const LabelTextResult = styled.p`
   margin-top: 20px;
+  margin-bottom: 10px;
 `;
 
 export const Loading = styled.p`
@@ -76,4 +81,6 @@ export const Miss = styled.p`
 `;
 export const Info = styled.p`
   color: black;
+  margin-top: 60px;
+  padding: 30px;
 `;

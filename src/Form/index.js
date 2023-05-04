@@ -25,14 +25,16 @@ export const Form = () => {
     const rate = ratesData.rates[currency];
 
     setResult({
+      sourceAmount: +amount,
       targetAmount: amount * rate,
       currency,
-    })
-  };
+    });
+  }
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amount, currency);
+
   };
 
   return (
@@ -51,12 +53,12 @@ export const Form = () => {
               <Input
                 value={amount}
                 onChange={({ target }) => setAmount(target.value)}
-                className="form__field"
                 type="number"
                 min="0.1"
                 step="any"
                 name="amount"
                 required
+                placeholder="PLN"
               />
             </Label>
             <Label>

@@ -4,10 +4,10 @@ const Result = ({ result }) => (
   <StyledResult>
     {!!result && (
       <strong>
-        {result.targetAmount.toFixed(2)} {result.currency}
+        {result.targetAmount.toFixed(2)} = {result.currency}
       </strong>
     )}
   </StyledResult>
 );
 
-export {Result};
+export { Result };
