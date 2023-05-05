@@ -32,7 +32,7 @@ export const LabelText = styled.span`
 `;
 
 export const Input = styled.input`
-  flex-basis: 500px;
+  flex-basis: 400px;
   width: 100%;
   padding: 5px;
   border: 2px solid #383535;
@@ -58,8 +58,9 @@ export const Button = styled.button`
   }
 `;
 export const Select = styled.select`
-  padding: 5px 90px;
+  padding: 5px 100px;
   margin-top: 10px;
+  margin-left: 20px;
   border-radius: 20px;
   border: 2px solid rgb(56, 53, 53);
   &:hover {
@@ -76,7 +77,7 @@ export const Loading = styled.p`
   color: black;
 `;
 
-export const Miss = styled.p`
+export const ErrorMessage = styled.p`
   color: red;
 `;
 export const Info = styled.p`

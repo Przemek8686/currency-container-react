@@ -4,11 +4,12 @@ export const useRatesData = () => {
   const [ratesData, setRatesData] = useState({
     state: "loading",
   });
+  const URL = "https://api.exchangerate.host/latest?base=PLN"
 
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch("https://api.exchangerate.host/lates");
+        const response = await fetch(URL);
 
         if (!response.ok) {
           throw new Error(response.statusText);

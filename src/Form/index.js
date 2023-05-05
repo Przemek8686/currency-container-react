@@ -11,12 +11,12 @@ import {
   Button,
   LabelTextResult,
   Loading,
-  Miss,
+  ErrorMessage,
   Info,
 } from "./styled";
 
 export const Form = () => {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState("");
   const ratesData = useRatesData();
   const [currency, setCurrency] = useState("EUR");
   const [amount, setAmount] = useState("");
@@ -42,9 +42,9 @@ export const Form = () => {
       {ratesData.state === "loading" ? (
         <Loading>Prosze czekac, ładujemy kursy walut.</Loading>
       ) : ratesData.state === "error" ? (
-        <Miss>
+        <ErrorMessage>
           Bład, sprawdz połaczenie z internetem, lub sprobuj ponownie.
-        </Miss>
+        </ErrorMessage>
       ) : (
         <>
           <Fieldset>
